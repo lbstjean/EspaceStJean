@@ -23,8 +23,9 @@ body::-webkit-scrollbar {
 
 html,
 .root {
-	font-size: 18px;
-	line-height: 29px;
+	font-size: 16px;
+	line-height: 1.6111111em;
+	/* line-height: 29px; */
 	/* font-size: 1.6111111vh;
 line-height: 3.2222222vh; */
 }
@@ -389,10 +390,26 @@ sub {
 
 .modal-text {
 	padding-left: 1vw;
-	/* 0.5vw */
 	bottom: 1.6111111em;
 	position: fixed;
 }
+
+.description {
+	padding-left: 1vw;
+	bottom: 1.6111111em;
+	overflow: auto;
+	max-height: 100vh;
+	max-width: 39vw;
+}
+
+/* .description-none {
+	padding-left: 1vw;
+	bottom: 1.6111111em;
+	position: fixed;
+	overflow: revert;
+	max-height: revert;
+	max-width: revert;
+} */
 
 .modal-price {
 	padding-right: 1vw;
@@ -406,23 +423,49 @@ sub {
 	font-weight: 700;
 }
 
+.artwork {
+	margin-top: 0;
+	margin-bottom: 0.722rem;
+}
+
+.artist {
+	font-size: 1em;
+	font-weight: 700;
+	margin-bottom: 0.361rem;
+	/* display: none; */
+	margin-top: 3.222222rem;
+}
+
 .title {
+	font-size: 1.6111111rem;
+	line-height: 1.6111111rem;
+	/* margin-top: 0.722rem; */
+	margin-top: 0;
+	letter-spacing: -0.02rem;
 	font-weight: 800;
 }
 
-.artist,
-.description {
-	font-weight: 500;
-}
 
-.artwork {
-	margin-top: 0;
+.about {
+	font-weight: 600;
 	margin-bottom: 0;
 }
 
-.vendu {
+.medium {
+	font-weight: 500;
+}
+
+.vendu,
+.sold {
 	font-weight: 800;
 	color: #771111;
+}
+
+.available,
+.disponible {
+	font-weight: 800;
+	color: #117711;
+	text-decoration: none;
 }
 
 .acquire {

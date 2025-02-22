@@ -314,7 +314,9 @@ li.active #gallery-button-show {
 
 .lightbox section:not(.modal-price) {
 	display: block;
-	background-position: center;
+
+	/* background-position: center; */
+	background-position: right;
 	background-repeat: no-repeat;
 	background-size: contain;
 	height: 100%;
@@ -377,6 +379,8 @@ li.active #gallery-button-show {
 /* ///////////// */
 
 /* @media screen and (orientation: landscape) and (min-width: 568px) { */
+
+
 @media screen and (min-width: 374px) {
 
 	.button-buy {
@@ -420,10 +424,25 @@ li.active #gallery-button-show {
 
 }
 
+@media only screen and (orientation: landscape) and (max-height: 768px) {
+
+	/* Added 2025-02-22 for Artwork Descriptions visual fix on iPad */
+	div.lightbox > section {
+		background-size: 60% !important;
+		/* background-size: contain; */
+		background-position-x: right !important;
+		background-position-y: center !important;
+	}
+
+	/* .description {
+		max-width: 25vw;
+	} */
+
+}
+
 @media screen and (orientation: landscape) and (max-width: 896px) {
 
 	/* i.active > div.section-content > .main-content { padding-top: 2rem; } */
-
 
 	/* MODIFICATION MADE ON TUESDAY MAY 24, 2022 */
 	/* Commented back July 11, 2022 */
@@ -595,6 +614,25 @@ li.active #gallery-button-show {
 
 	.btn-hover-buy {
 		max-width: 88px;
+	}
+
+	/* Artworks Modal System */
+	.lightbox section:not(.modal-price) {
+		background-position: top;
+	}
+
+	.modal-text {
+		margin: 0 5vw;
+		max-width: 90vw;
+	}
+
+	.artist {
+		margin-top: 47.5vh;
+	}
+
+	/* Added 2025-02-22 for Artwork Descriptions visual fix on iPad */
+	.description {
+		max-height: 75vh;
 	}
 
 }
